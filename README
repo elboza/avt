@@ -1,0 +1,46 @@
+*********************************************
+*
+**********avt - Aviation Tools **************
+*
+*********************************************
+gets metar
+gets taf
+decode iata / icao airports
+gets sunrise / sunset
+gets geo info 
+decode airline codes
+decode aircraft tail codes
+decode aircraft names
+
+*** HOWTO INSTALL
+it runs on all POSIX systems (unix, linux, osx, ...)
+open a shell, goto the correct dir and type:
+
+$ sudo ./install.sh
+
+that's all folks!
+
+*** LICENSE
+this software is distributed under GPLv2 license.
+
+*** AUTHOR
+Fernando Iazeolla - iazasoft
+
+*** EXAMPLE
+$ avt --help
+outputs avt's usage
+
+$ avt -i fco -gmf
+FCO-LIRF: Rome, Leonardo da Vinci International, Italy, IT.
+lat: 41.804444 long: 12.250833
+sunrise: 07:40:31 sunset: 17:12:33 alt: 3m(9.8ft)
+isotime: 2013-02-02 22:25:42 +0100 timezone: 1/A (dst: False)
+localtime: 2 Feb 2013 22:25:42
+2013/02/02 20:50
+LIRF 022050Z 25025KT 9999 FEW022 BKN040 11/03 Q0992 NOSIG
+2013/02/02 18:24
+TAF LIRF 021700Z 0218/0324 25022G32KT 8000 SCT020 BKN060 
+      TEMPO 0218/0224 4000 SHRA BKN014 
+      BECMG 0223/0302 07012KT 
+      BECMG 0304/0306 01020KT
+

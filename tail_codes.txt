@@ -1,0 +1,232 @@
+YA:Afghanistan
+ZA:Albania
+7T:Algeria
+C3:Andorra
+D2:Angola
+VP-LA:Anguilla
+V2:Antigua and Barbuda
+LQ:Argentina
+LV:Argentina
+EK:Armenia
+P4:Aruba (Netherlands)
+VH:Australia
+OE:Austria
+4K:Azerbaijan
+C6:Bahamas
+A9C:Bahrain
+S2:Bangladesh
+8P:Barbados
+EW:Belarus
+OO:Belgium
+V3:Belize
+TY:Benin
+VP-B:Bermuda
+A5:Bhutan
+CP:Bolivia
+T9:Bosnia-Hercegovina
+A2:Botsuana
+PP:Brazil
+PT:Brazil
+PR:Brazil
+VP-LV:British Virgin Islands
+V8:Brunei Darussalam
+LZ:Bulgaria
+XT:Burkina Faso
+9U:Burundi
+XU:Cambodia
+TJ:Cameroon
+C:Canada
+CF:Canada
+D4:Cape Verde
+VP-C:Cayman Islands
+TL:Central Africa
+TT:Chad
+CC:Chile
+B:China - Peoples Republic
+HK:Colombia
+D6:Comoros
+9Q:Congo, Democratic Republic of the
+TN:Congo, Republic of
+E5:Cook Islands
+TI:Costa Rica
+9A:Croatia
+CU:Cuba
+5B:Cyprus
+OK:Czech Republic
+OY:Denmark
+J2:Djibouti
+J7:Dominica
+HI:Dominican Republic
+PK:East Timor (Timor-Leste)
+HC:Ecuador
+SU:Egypt
+YS:El Salvador
+3C:Equatorial Guinea
+E3:Eritrea
+ES:Estonia
+ET:Ethiopia
+VP-F:Falkland Islands (UK)
+OY:Faroe Islands (Denmark)
+DQ:Fiji
+OH:Finland
+F:France
+F-O:French Guiana
+F:French Polynesia
+TR:Gabon
+C5:Gambia
+4L:Georgia
+D:Germany
+9G:Ghana
+VR-G:Gibraltar (UK)
+SX:Greece
+OY:Greenland (Denmark)
+J3:Grenada
+F:Guadeloupe - French Antilles
+N:Guam (USA)
+TG:Guatemala
+3X:Guinea
+J5:Guinea Bissau
+8R:Guyana
+HH:Haiti
+HR:Honduras
+HA:Hungary
+TF:Iceland
+VT:India
+PK:Indonesia
+EP:Iran
+YI:Iraq
+EI:Ireland
+M:Isle of Man
+4X:Israel
+I:Italy
+TU:Ivory Coast
+6Y:Jamaica
+JA:Japan
+JY:Jordan
+UN:Kazakhstan
+5Y:Kenya
+T3:Kiribati
+9K:Kuwait
+EX:Kyrgyzstan
+RDPL:Laos
+YL:Latvia
+OD:Lebanon
+7P:Lesotho
+EL:Liberia
+5A:Libya
+HB:Lichtenstein
+LY:Lithuania
+LX:Luxembourg
+Z3:Macedonia
+5R:Madagascar
+7Q:Malawi
+9M:Malaysia
+8Q:Maldives
+TZ:Mali
+9H:Malta
+V7:Marshall Islands
+F:Martinique - French Antilles
+5T:Mauritania
+3B:Mauritius
+F:Mayotte
+XA:Mexico
+XB:Mexico
+XC:Mexico
+V6:Micronesia, Federated States of
+ER:Moldova
+3A:Monaco
+MT:Mongolia
+4O:Montenegro
+VP-LM:Montserrat
+CN:Morocco
+C9:Mozambique
+XY:Myanmar
+XZ:Myanmar (Burma)
+V5:Namibia
+C2:Nauru
+9N:Nepal
+PH:Netherlands
+PJ:Netherlands Antilles
+F:New Caledonia (France)
+ZK:New Zealand
+ZL:New Zealand
+ZM:New Zealand
+YN:Nicaragua
+5U:Niger
+5N:Nigeria
+P:North Korea
+N:Northern Mariana Islands
+LN:Norway
+A4O:Oman
+AP:Pakistan
+T8A:Palau
+HP:Panama
+P2:Papua New Guinea
+ZP:Paraguay
+OB:Peru
+RP:Philippines
+SP:Poland
+CS:Portugal
+N:Puerto Rico
+A7:Qatar
+F-OD:Reunion
+YR:Romania
+RA:Russia
+9XR:Rwanda
+V4:Saint Kitts and Nevis
+J6:Saint Lucia
+F:Saint-Pierre and Miquelon
+5W:Samoa
+T7:San Marino
+S9:Sao Tome and Principe
+HZ:Saudi Arabia
+6V:Senegal
+6W:Senegal
+YU:Serbia
+S7:Seychelles
+9L:Sierra Leone
+9V:Singapore
+OM:Slovakia
+S5:Slovenia
+H4:Solomon Islands
+6O:Somalia
+ZS:South Africa
+ZT:South Africa
+ZU:South Africa
+HL:South Korea
+EC:Spain
+4R:Sri Lanka
+J8:St. Vincent & Grenadines
+ST:Sudan
+PZ:Suriname
+3D:Swaziland
+SE:Sweden
+HB:Switzerland
+YK:Syria
+B:Taiwan, Republic of China
+EY:Tajikistan
+5H:Tanzania
+HS:Thailand
+5V:Togo
+A3:Tonga
+9Y:Trinidad & Tobago
+TS:Tunesia
+TC:Turkey
+EZ:Turkmenistan
+VQ-T:Turks & Caicos
+T2:Tuvalu
+5X:Uganda
+UR:Ukraine
+A6:United Arab Emirates
+G:United Kingdom
+CX:Uruguay
+N:US Virgin Islands
+N:USA
+UK:Uzbekistan
+YJ:Vanuatu
+HV:Vatican City
+YV:Venezuela
+VN:Vietnam
+7O:Yemen
+9J:Zambia
+Z:Zimbabwe
