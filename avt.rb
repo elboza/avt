@@ -20,11 +20,11 @@ class GeoMetar
     @ssv_company1,@ssv_company2,@ssv_name1,@ssv_name2,@ssv_country=nil,nil,nil,nil,nil
     @metar,@taf=nil,nil
     @path=""
-    @iatafile="icao_iata.txt"
-    @tailcodefile="tail_codes.txt"
-    @geoiatafile="geo_iata.txt"
-    @aircraftfile="aircraft_type_decode.txt"
-    @ssvfile="ssv.txt"
+    @iatafile="icao_iata.avt"
+    @tailcodefile="tail_codes.avt"
+    @geoiatafile="geo_iata.avt"
+    @aircraftfile="aircraft_type_decode.avt"
+    @ssvfile="ssv.avt"
     @gdir="/usr/share/avt/"
   end
   def get_iata
@@ -245,6 +245,69 @@ class GeoMetar
       f.close unless f.nil?
     end
   end
+  def list_file(file)
+    ldir=""
+    begin
+      f=File.open ldir+file
+      a=f.readlines
+      a.each do |x|
+	puts x
+      end
+    rescue Errno::ENOENT
+      if ldir==""
+	ldir=@gdir
+	retry
+      else
+	raise
+      end
+    rescue Exception => e
+      puts "error",e
+    ensure
+      f.close unless f.nil?
+    end
+  end
+  def tc(tcode)
+    ldir=""
+    begin
+      f=File.open ldir+@tailcodefile
+      a=f.readlines
+      a.each do |x|
+	puts x if x.split(':').first==tcode.upcase
+      end
+    rescue Errno::ENOENT
+      if ldir==""
+	ldir=@gdir
+	retry
+      else
+	raise
+      end
+    rescue Exception => e
+      puts "error",e
+    ensure
+      f.close unless f.nil?
+    end
+  end
+  def ac(tcode)
+    ldir=""
+    begin
+      f=File.open ldir+@aircraftfile
+      a=f.readlines
+      a.each do |x|
+	puts x if x.split(':').first==tcode.upcase
+      end
+    rescue Errno::ENOENT
+      if ldir==""
+	ldir=@gdir
+	retry
+      else
+	raise
+      end
+    rescue Exception => e
+      puts "error",e
+    ensure
+      f.close unless f.nil?
+    end
+  end
 end
 def print_usage(errorcode)
   puts "#{$0} v#{VERSION} by Fernando Iazeolla, 2013, iazasoft"
@@ -264,11 +327,13 @@ OPTIONS:
 --decode    -d                        get decoded metar
 --coord     -c                        displays latitude and longitude
 --sun       -s                        displays sunrise and sunset
-  
+--list      -l   [ac|tc|ssv|geo|apt]  displays file database
+
 examples: 
 avt -i fco -gmf	 	displays geo info, metar and taf for iata's fco station
 avt --ssv ek	 	decode airline code
 avt -i jfk --coord	print jfk's latitude and longitude
+avt --list apt |grep CDG
   EOF
   exit(errorcode)
 end
@@ -289,6 +354,7 @@ def main
     ['--apt','-i',GetoptLong::REQUIRED_ARGUMENT],
     ['--decode','-d',GetoptLong::NO_ARGUMENT],
     ['--coord','-c',GetoptLong::NO_ARGUMENT],
+    ['--list','-l',GetoptLong::REQUIRED_ARGUMENT],
     ['--sun','-s',GetoptLong::NO_ARGUMENT]
   )
   begin
@@ -344,6 +410,28 @@ def main
     when '--coord'
       avt.get_geo
       puts "#{avt.lat} / #{avt.long}"
+      have_options_f=true
+    when '--list'
+      case arg
+      when 'tc'
+	avt.list_file "tail_codes.avt"
+      when 'ac'
+	avt.list_file "aircraft_type_decode.avt"
+      when 'ssv'
+	avt.list_file "ssv.avt"
+      when 'geo'
+	avt.list_file "geo_iata.avt"
+      when 'apt'
+	avt.list_file "icao_iata.avt"
+      else
+	puts "invalid option(s): try #{$0} --help"
+      end
+      have_options_f=true
+    when '--tc'
+      avt.tc(arg)
+      have_options_f=true
+    when '--ac'
+      avt.ac(arg)
       have_options_f=true
     end
   end

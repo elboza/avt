@@ -96,7 +96,7 @@ AIRD:Beagle:A-109 Airedale :L
 AJET:Dornier:Alpha Jet :M 
 AJET:Dassault-Breguet:Alpha Jet :M 
 ALH:HAL:Dhruv :L 
-ALIZ:Breguet:1050 Alizé :M 
+ALIZ:Breguet:1050 Alize :M 
 ALO2:Sud-Est:SE-3130 Alouette 2 :L 
 ALO2:Sud:SA-318 / SA-3180 / SE-313 / SE-3130 Alou:L 
 ALO2:Aerospatiale / SNIAS:SA-318 Alouette 2 :L 
@@ -208,7 +208,7 @@ B17:Boeing:B-17 Flying Fortress :M
 B18T:Beech:18 (turbine) :L 
 B190:Beech:1900 :M 
 B2:Northrop:B-2 Spirit :H 
-B209:Bölkow:BO-209 Monsun :L 
+B209:Bolkow:BO-209 Monsun :L 
 B212:Agusta / AgustaWestland:AB-212 :L 
 B212:Bell Helicopter:UH-1N :L 
 B212:Bell Helicopter:212 Twin Two-Twelve :L 
@@ -351,11 +351,11 @@ BRB2:Brantly:B-2 :L
 BROU:Max Holste:MH-1521 Broussard :L 
 BSCA:Boeing:747SCA Shuttle Carrier :H 
 BSTP:Bell Helicopter:214ST SuperTransport :M 
-BU31:Bücker:Bü-131 Jungmann :L 
+BU31:Bucker:Bu-131 Jungmann :L 
 BU31:CASA:1-131 :L 
-BU33:Bücker:Bü-133 Jungmeister :L 
+BU33:Bucker:Bu-133 Jungmeister :L 
 BU33:CASA:1-133 :L 
-BU81:Bücker:Bü-181 Bestmann :L 
+BU81:Bucker:Bu-181 Bestmann :L 
 BU81:Heliopolis:Gomhouria :L 
 BU81:Zlin:Z-183 :L 
 BU81:Zlin:Z-181 :L 
@@ -521,8 +521,8 @@ CP23:Mudry:CAP-230 :L
 CP30:Piel:Emeraude :L 
 CP32:Piel:Super Emeraude (CP-320/325/328) :L 
 CP60:Piel:Diamant :L 
-CP75:Piel:Béryl :L 
-CP80:Piel:Zéphir :L 
+CP75:Piel:Beryl :L 
+CP80:Piel:Zephir :L 
 CP90:Piel:Pinocchio :L 
 CRES:PAC:Cresco :L 
 CRJ1:Canadair:CL-600 Regional Jet CRJ-100 :M 
@@ -674,7 +674,7 @@ EH10:Agusta / AgustaWestland:EH-101 :M
 EH10:EH Industries:CH-149 Cormorant :M 
 EH10:EH Industries:EH-101 :M 
 EH10:Kawasaki:KHI-01 :M 
-ELST:Pützer:Elster :L 
+ELST:Putzer:Elster :L 
 EN28:Enstrom:F-28 :L 
 EN28:Enstrom:280 Shark :L 
 EN48:Enstrom:480 :L 
@@ -735,20 +735,20 @@ F8:LTV:F-8 Crusader :M
 F86:Canadair:CL-13 Sabre :M 
 F86:North American:F-86 Sabre :M 
 F8L:Aviamilano:F-8L Falco :L 
-F900:Dassault:Mystère 900 :M 
+F900:Dassault:Mystere 900 :M 
 F900:Dassault:Falcon 900 :M 
 F9F:Grumman:F9F Panther :L 
-FA10:Dassault:Mystère 10 :M 
+FA10:Dassault:Mystere 10 :M 
 FA10:Dassault:Falcon 10 :M 
-FA10:Dassault:Mystère 10 :M 
-FA10:Dassault:Mystère 100 :M 
+FA10:Dassault:Mystere 10 :M 
+FA10:Dassault:Mystere 100 :M 
 FA11:Fairchild:F-11 Husky :L 
-FA20:Dassault:Mystère 20 :M 
-FA20:Dassault:Mystère 200 :M 
+FA20:Dassault:Mystere 20 :M 
+FA20:Dassault:Mystere 200 :M 
 FA20:Dassault:Falcon 20 :M 
 FA24:Fairchild:UC-61 Argus :L 
 FA24:Fairchild:UC-61 Forwarder :L 
-FA50:Dassault:Mystère 50 :M 
+FA50:Dassault:Mystere 50 :M 
 FA50:Dassault:Falcon 50 :M 
 FA62:Fairchild:Cornell :L 
 FA7X:Dassault:Falcon 7X :M 
@@ -761,7 +761,7 @@ FLAM:Dassault:Flamant :L
 FN33:SIAI-Marchetti:FN-333 Riviera :L 
 FOUG:Aerospatiale / SNIAS:CM-170R Magister :L 
 FOUG:Fouga:CM-170R Magister :L 
-FOUG:Potez:CM-175 Zéphyr :L 
+FOUG:Potez:CM-175 Zephyr :L 
 FOUG:Potez:CM-170R Magister :L 
 FOUG:Sud:CM-170R Magister :L 
 FREL:Aerospatiale / SNIAS:SA-321 Super Frelon :M 
@@ -920,7 +920,7 @@ IA50:FMA:IA-50 Guarani 2 :M
 IA50:FMA:IA-50 Guarani 2 :M 
 IA51:FMA:IA-51 Tehuelche :L 
 IA51:FMA:IA-51 Tehuelche :L 
-IA58:FMA:IA-58 Pucará :L 
+IA58:FMA:IA-58 Pucara :L 
 IA63:FMA:IA-63 Pampa :L 
 IL14:Ilyushin:Il-14 :M 
 IL18:Ilyushin:Il-20 :M 
@@ -986,7 +986,7 @@ JS32:BAe:BAe-3200 Jetstream Super 31 :M
 JS41:BAe:BAe-4100 Jetstream 41 :M 
 JU52:CASA:352L :M 
 JU52:Junkers:Ju-52/3m :M 
-JUNR:Bölkow:BO-208 Junior :L 
+JUNR:Bolkow:BO-208 Junior :L 
 JUNR:MFI:MFI-9 Junior :L 
 K126:Kamov:Ka-126 :L 
 K226:Kamov:Ka-226:L 
@@ -1011,7 +1011,7 @@ KA62:Kamov:Ka-60:L
 KE3:Boeing:KE-3 :H 
 KFIR:IAI:Kfir :M 
 KH4:Kawasaki:KH-4 :L 
-KL07:Bölkow:Kl-107 :L 
+KL07:Bolkow:Kl-107 :L 
 KL07:Klemm:Kl-107 :L 
 KL25:Klemm:L-25 :L 
 KL35:Klemm:Kl-35 :L 
@@ -1210,13 +1210,13 @@ MT2:Mitsubishi:T-2 :M
 MU2:Mitsubishi:MU-2 :L 
 MU30:Mitsubishi:MU-300 Diamond :M 
 MYA4:Myasishchev:M-4 :H 
-MYS4:Dassault:MD-454A Mystère 4A :M 
+MYS4:Dassault:MD-454A Mystere 4A :M 
 N110:Nord / SNCAN:1100 Noralpha :L 
 N120:Nord / SNCAN:1200 Norecrin :L 
 N260:Max Holste:MH-260 Super Broussard :M 
 N260:Nord / SNCAN:260 Super Broussard :M 
-N262:Aerospatiale / SNIAS:N-262 Frégate :M 
-N262:Aerospatiale / SNIAS:Frégate :M 
+N262:Aerospatiale / SNIAS:N-262 Fregate :M 
+N262:Aerospatiale / SNIAS:Fregate :M 
 N262:Nord / SNCAN:262 :M 
 N320:Nord / SNCAN:3202 :L 
 N340:Nord / SNCAN:3400 :L 
@@ -1347,8 +1347,8 @@ PEMB:Hunting Percival:P-66 Pembroke :L
 PEMB:Percival:P-66 Pembroke :L 
 PICO:General Avia:F-15 Delfino :L 
 PICO:General Avia:F-15 Picchio :L 
-PILL:Piper:PA-28R-300 Pillán :L 
-PILL:CASA:T-35 Pillán :L 
+PILL:Piper:PA-28R-300 Pillan :L 
+PILL:CASA:T-35 Pillan :L 
 PILL:CASA:E-26 Tamiz :L 
 PINO:General Avia:F-22 Pinguino :L 
 PLUS:Taylorcraft:Auster 1  / Plus C / Plus D:L 
@@ -1392,7 +1392,7 @@ PZ04:PZL Okecie:PZL-104 Wilga:L
 PZ05:PZL Okecie:PZL-105 Flaming :L 
 PZ06:PZL Okecie:PZL-106 Kruk :L 
 PZ12:PZL Okecie:PZL-112 Koliber Junior :L 
-PZ26:PZL Okecie:PZL-126 Mrówka :L 
+PZ26:PZL Okecie:PZL-126 Mrowka :L 
 PZ3T:PZL Okecie:PZL-130 Orlik :L 
 PZ4M:PZL Okecie:PZL-104M Wilga 2000 :L 
 PZ6T:PZL Okecie:PZL-106AT Turbo Kruk :L 
@@ -1422,9 +1422,9 @@ RC70:Fuji:FA-300 :L
 RC70:Rockwell:700 Commander 700 :L 
 RELI:Stinson:Reliant :L 
 RF10:Fournier:RF-10 :L 
-RF4:Sportavia-Pützer:RF-4 :L 
+RF4:Sportavia-Putzer:RF-4 :L 
 RF47:Fournier:RF-47 :L 
-RF5:Sportavia-Pützer:RF-5 :L 
+RF5:Sportavia-Putzer:RF-5 :L 
 RF6:Fournier:RF-6 :L 
 RF6:Slingsby:Firefly :L 
 RF9:Fournier:RF-9 :L 
@@ -1438,7 +1438,7 @@ RJ85:BAe:Avro RJ-85 :M
 ROND:Ambrosini:F-4 Rondone :L 
 ROND:Ambrosini:Rondone :L 
 RP1:Mitsubishi:RP-1 :L 
-RS18:Sportavia-Pützer:RS-180 Sportsman :L 
+RS18:Sportavia-Putzer:RS-180 Sportsman :L 
 RV10:Vans:RV-10 :L 
 RV3:Vans:RV-3 :L 
 RV4:Vans:RV-4 :L 
@@ -1560,7 +1560,7 @@ SM19:SIAI-Marchetti:SM-1019 :L
 SM20:Technoavia (Interavia):SM-2000 :L 
 SM60:Stinson:SM-6000 Tri-Motor :L 
 SM92:Technoavia (Interavia):SM-92 Finist :L 
-SMB2:Dassault:Super Mystère B2 :M 
+SMB2:Dassault:Super Mystere B2 :M 
 SOKL:Benes-Mraz:M-1 Sokol :L 
 SP18:Luscombe:11E Spartan 185 :L 
 SP55:Technoavia (Interavia):SP-55 :L 
@@ -1769,7 +1769,7 @@ VO10:North American Rockwell:Darter Commander :L
 VO10:Volaircraft:Volaire 10 :L 
 VP2:Evans:VP-2 Volksplane :L 
 VTOR:Partenavia:AP-68TP-600 Viator :L 
-W3:PZL Swidnik:W-3 Sokól :L 
+W3:PZL Swidnik:W-3 Sokol :L 
 WA40:Wassmer:WA-40 Super 4 :L 
 WA41:Wassmer:WA-41 Baladou :L 
 WA42:Wassmer:WA-421 Prestige :L 
@@ -1866,10 +1866,10 @@ Z26:Zlin:Z-326 Akrobat :L
 Z26:Zlin:Z-226 Trener 6 :L 
 Z26:Zlin:Z-726 Universal :L 
 Z26:Zlin:Z-526 Trener Master :L 
-Z37P:LET:Z-237 Cmelák :L 
-Z37P:LET:Z-37 Cmelák :L 
-Z37P:Zlin:Z-37 Cmelák :L 
-Z37P:Zlin:Z-237 Cmelák :L 
+Z37P:LET:Z-237 Cmelak :L 
+Z37P:LET:Z-37 Cmelak :L 
+Z37P:Zlin:Z-37 Cmelak :L 
+Z37P:Zlin:Z-237 Cmelak :L 
 Z37T:Zlin:Z-137 Agro Turbo :L 
 Z37T:Zlin:Z-37T Agro Turbo :L 
 Z42:Zlin:Zlin Z-142 :L 
