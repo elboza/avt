@@ -313,7 +313,8 @@ class GeoMetar
   end
 end
 def print_usage(errorcode)
-  puts "#{File.basename($0)} v#{Avt::VERSION} by Fernando Iazeolla, 2013, iazasoft"
+  puts File.basename($0)
+  puts "Aviation Tools (avt) v#{Avt::VERSION} by Fernando Iazeolla, 2013, iazasoft."
   puts <<-EOF
 OPTIONS:
 --metar     -m                        get metar
@@ -327,7 +328,7 @@ OPTIONS:
 --version   -v                        displays avt version
 --help      -h                        displays this help
 --apt       -i   <iata or icao code>  input airport code
---decode    -d                        get decoded metar
+--decode    -d                        get decoded metar (with -m) -dm
 --coord     -c                        displays latitude and longitude
 --sun       -s                        displays sunrise and sunset
 --list      -l   [ac|tc|ssv|geo|apt]  displays file database
@@ -439,12 +440,12 @@ def main
     end
   end
   if have_options_f==false
-    puts "no options: try #{File.basename($0)} --help"
+    puts "no options: try '#{File.basename($0)} --help'"
     exit(1)
   end
   rescue GetoptLong::Error =>e
     puts e
-    puts "invalid option(s): try #{File.basename($0)} --help"
+    puts "invalid option(s): try '#{File.basename($0)} --help'"
     exit(1)
   end
 end
