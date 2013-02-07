@@ -7,8 +7,11 @@
 require 'getoptlong'
 require 'open-uri'
 require 'rexml/document'
+require 'pathname'
 
+module Avt
 VERSION = "0.1"
+end
 
 class GeoMetar
   attr_accessor:lat,:long,:iata,:icao,:timezone,:suffix,:dst,:day,:month,:decode,:quiet
@@ -310,7 +313,7 @@ class GeoMetar
   end
 end
 def print_usage(errorcode)
-  puts "#{$0} v#{VERSION} by Fernando Iazeolla, 2013, iazasoft"
+  puts "#{File.basename($0)} v#{Avt::VERSION} by Fernando Iazeolla, 2013, iazasoft"
   puts <<-EOF
 OPTIONS:
 --metar     -m                        get metar
@@ -361,7 +364,7 @@ def main
   opts.each do |opt,arg|
     case opt
       when '--version'
-	puts VERSION
+	puts Avt::VERSION
 	exit(0)
       when '--help'
 	print_usage(0)
