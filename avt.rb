@@ -439,12 +439,12 @@ def main
     end
   end
   if have_options_f==false
-    puts "no options: try #{$0} --help"
+    puts "no options: try #{File.basename($0)} --help"
     exit(1)
   end
   rescue GetoptLong::Error =>e
     puts e
-    puts "invalid option(s): try #{$0} --help"
+    puts "invalid option(s): try #{File.basename($0)} --help"
     exit(1)
   end
 end
