@@ -13,10 +13,13 @@ decode aircraft tail codes
 decode aircraft names
 
 *** HOWTO INSTALL
-it runs on all POSIX systems (unix, linux, osx, ...)
+the install script runs on all POSIX systems (unix, linux, osx, ...)
 open a shell, goto the correct dir and type:
 
 $ sudo ./install.sh
+
+this software can run (on all OS, you must install Ruby lang before) without installing it: just run it from the local directory.
+
 
 that's all folks!
 
