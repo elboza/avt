@@ -18,8 +18,7 @@ open a shell, goto the correct dir and type:
 
 $ sudo ./install.sh
 
-this software can run (on all OS, you must install Ruby lang before) without installing it: just run it from the local directory.
-
+or run it directly from the local directory without installing it (Ruby lang is needed)
 
 that's all folks!
 
