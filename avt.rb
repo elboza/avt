@@ -10,7 +10,7 @@ require 'rexml/document'
 require 'pathname'
 
 module Avt
-VERSION = "0.1"
+VERSION = "0.2"
 end
 
 class GeoMetar
