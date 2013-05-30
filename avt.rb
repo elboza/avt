@@ -34,7 +34,7 @@ class GeoMetar
     ldir=""
     if @icao!=nil
       begin
-	f=File.open ldir+@iatafile
+	f=File.open ldir+@iatafile ,"r:UTF-8"
 	a=f.readlines
 	a.each do |x|
 	    ii=x.split ':'
@@ -65,7 +65,7 @@ class GeoMetar
     ldir=""
     if @iata!=nil
       begin
-	f=File.open ldir+@iatafile
+	f=File.open ldir+@iatafile ,"r:UTF-8"
 	a=f.readlines
 	a.each do |x|
 	  ii=x.split ':'
@@ -98,7 +98,7 @@ class GeoMetar
     if @iata!=nil
       begin
 	get_icao
-	f=File.open ldir+@geoiatafile
+	f=File.open ldir+@geoiatafile ,"r:UTF-8"
 	a=f.readlines
 	a.each do |x|
 	  ii=x.split ':'
@@ -137,7 +137,7 @@ class GeoMetar
     ldir=""
     finded=false
     begin
-      f=File.open ldir+@ssvfile
+      f=File.open ldir+@ssvfile ,"r:UTF-8"
       a=f.readlines
       a.each do |x|
 	ii=x.split ':'
@@ -251,7 +251,7 @@ class GeoMetar
   def list_file(file)
     ldir=""
     begin
-      f=File.open ldir+file
+      f=File.open ldir+file ,"r:UTF-8"
       a=f.readlines
       a.each do |x|
 	puts x
@@ -272,7 +272,7 @@ class GeoMetar
   def tc(tcode)
     ldir=""
     begin
-      f=File.open ldir+@tailcodefile
+      f=File.open ldir+@tailcodefile ,"r:UTF-8"
       a=f.readlines
       a.each do |x|
 	puts x if x.split(':').first==tcode.upcase
@@ -293,7 +293,7 @@ class GeoMetar
   def ac(tcode)
     ldir=""
     begin
-      f=File.open ldir+@aircraftfile
+      f=File.open ldir+@aircraftfile ,"r:UTF-8"
       a=f.readlines
       a.each do |x|
 	puts x if x.split(':').first==tcode.upcase
