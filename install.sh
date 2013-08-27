@@ -7,7 +7,8 @@ SSV_FILE="ssv.avt"
 TC_FILE="ssv.avt"
 LIB_DIR="/usr/share/avt/"
 
-echo "avt installer"
+echo "avt LEGACY installer"
+echo "This installer is deprecated. Next time use 'sudo make install' instead."
 if [ ! -d "/usr/share/avt" ] ; then
 mkdir /usr/share/avt
 fi
@@ -26,4 +27,4 @@ chmod 444 ${LIB_DIR}${GEO_FILE}
 chmod 444 ${LIB_DIR}${ICAO_IATA_FILE}
 chmod 444 ${LIB_DIR}${SSV_FILE}
 chmod 444 ${LIB_DIR}${TC_FILE}
-
+echo "installed."

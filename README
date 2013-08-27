@@ -16,11 +16,7 @@ decode aircraft names
 the install script runs on all POSIX systems (unix, linux, osx, ...)
 open a shell, goto the correct dir and type:
 
-$ sudo ./install.sh
-
-or
-
-$ sudo make install
+$ sudo make install         #or use the legacy installer: 'sudo ./install.sh'
 
 or run it directly from the local directory without installing it (Ruby lang is needed)
 
