@@ -18,6 +18,10 @@ open a shell, goto the correct dir and type:
 
 $ sudo ./install.sh
 
+or
+
+$ sudo make install
+
 or run it directly from the local directory without installing it (Ruby lang is needed)
 
 that's all folks!
