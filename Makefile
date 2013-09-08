@@ -7,12 +7,12 @@ LIB_DIR="/usr/share/avt/"
 SRC_NAME=avt.rb
 PROG_NAME=avt
 DEST_DIR=/usr/bin/
-PROG_VERSION="0.2"
+PROG_VERSION=`cat avt.rb|grep "VERSION="|cut -d '"' -f2`
 SHELL=/bin/bash
 
 all:
 
-.PHONY: install uninstall dist
+.PHONY: install uninstall dist clean
 
 install:
 	echo "installing ${PROG_NAME} to ${DEST_DIR}"
@@ -55,6 +55,8 @@ dist:
 	rmdir ${PROG_NAME}
 	echo "done."
 
+clean:
+	rm -f ./${PROG_NAME}/*
+	rmdir ${PROG_NAME}
 
-	
 	
