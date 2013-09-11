@@ -11,7 +11,7 @@ revision			1
 maintainers			gmail.com:fernando.iazeolla
 description			Aviation Tools (metar, taf, decode airline, geo info)
 long_description	\
-		Aiation Tools: \
+		Aviation Tools: \
 		* gets metar \
 		* gets taf \
 		* decode iata / icao airports \
