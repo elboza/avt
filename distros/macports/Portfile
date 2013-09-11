@@ -36,7 +36,11 @@ build {}
 destroot {
 	xinstall -m 755 ${worksrcpath}/avt.rb ${destroot}${prefix}/bin/avt
 	xinstall -d ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/*.avt ${destroot}/usr/share/avt/
+	xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}/usr/share/avt/
+	xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}/usr/share/avt/
+	xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}/usr/share/avt/
+	xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}/usr/share/avt/
+	xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}/usr/share/avt/
 }
 
 
