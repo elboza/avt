@@ -3,6 +3,7 @@
 # avt - Aviaton Tools
 # author: Fernando Iazeolla - iazasoft
 # this software is licensed under GPLv2
+# web: http://github.com/elboza/avt
 
 require 'getoptlong'
 require 'open-uri'
