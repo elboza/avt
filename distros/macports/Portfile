@@ -30,17 +30,20 @@ checksums           md5    aefca34db3fea738019dbfb402cf9f18 \
 
 worksrcdir			${name}
 use_configure		no
-
+patch {
+	reinplace "s|/usr/share/avt/|${prefix}/share/avt/|g" ${worksrcpath}/avt.rb
+}
 build {}
-
+destroot.destdir prefix=/usr
 destroot {
 	xinstall -m 755 ${worksrcpath}/avt.rb ${destroot}${prefix}/bin/avt
-	xinstall -d ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}/usr/share/avt/
+	xinstall -d ${destroot}${prefix}/share/avt/
+	eval xinstall -m 644 [glob ${worksrcpath}/*.avt] ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}${prefix}/share/avt/
 }
 
 
