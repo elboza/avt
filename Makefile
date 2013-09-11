@@ -30,7 +30,7 @@ install:
 	chmod 444 ${LIB_DIR}${ICAO_IATA_FILE}
 	chmod 444 ${LIB_DIR}${SSV_FILE}
 	chmod 444 ${LIB_DIR}${TC_FILE}
-	ECHO "DONE."
+	echo "DONE."
 
 uninstall:
 	echo "uninstalling avt from system…"
