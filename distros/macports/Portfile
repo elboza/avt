@@ -1,0 +1,42 @@
+# $Id$
+
+PortSystem			1.0
+
+name				avt
+version				0.2
+categories			science
+platforms			darwin linux
+license				GPL-2+
+revision			1
+maintainers			gmail.com:fernando.iazeolla
+description			Aviation Tools (metar, taf, decode airline, geo info)
+long_description	\
+		Aiation Tools: \
+		* gets metar \
+		* gets taf \
+		* decode iata / icao airports \
+		* gets sunrise / sunset \
+		* gets geo info \
+		* decode airline codes \
+		* decode aircraft tail codes \
+		* decode aircraft names \
+					
+homepage            http://github.com/elboza/avt
+master_sites        http://www.autistici.org/0xFE/software/releases/avt
+
+checksums           md5    698d81753decd1e011524bc6a42a0d5d \
+                    sha1    46936ec71217c49279568b4b8ad901923e7b2a0d \
+                    rmd160  439b76e1f5a04f28fda2c777863f43c2a920cf1b
+
+worksrcdir			${name}
+use_configure		no
+
+build {}
+
+destroot {
+	xinstall -m 755 ${worksrcpath}/avt.rb ${destroot}${prefix}/bin/avt
+	xinstall -d ${destroot}/usr/share/avt/
+	xinstall -m 644 ${worksrcpath}/*.avt ${destroot}/usr/share/avt/
+}
+
+
