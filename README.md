@@ -24,8 +24,6 @@ or use the legacy installer: `sudo ./install.sh`
 
 or run it directly from the local directory without installing it (**Ruby lang is needed**)
 
-that's all folks!
-
 #####LICENSE
 this software is distributed under GPLv2 license.
 
@@ -81,7 +79,7 @@ avt --list apt |grep CDG
 #####web
 [avt project page](http://github.com/elboza/avt)
 
-####That's all falks
+####That's all falks!
 
 ```
  _____
