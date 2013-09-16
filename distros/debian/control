@@ -1,0 +1,15 @@
+Source: avt
+Section: utilities
+Priority: extra
+Maintainer: Fernando Iazeolla <xnando@yahoo.it>
+Build-Depends: debhelper (>= 8.0.0), ruby
+Standards-Version: 3.9.4
+Homepage: http://github.com/elboza/avt
+#Vcs-Git: git://git.debian.org/collab-maint/avt.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/avt.git;a=summary
+
+Package: avt
+Architecture: all
+Depends: ${misc:Depends}, ruby
+Description: Aviation Tools. metar and taf command line.
+ Aviation Tools. *Gets metar. *Gets taf. *decode iata/icao airports. *gets sinrise/sunset. *Gets geo info. *Decode airline codes. *Decode aircraft tail codes. *Decode aircraft names.
