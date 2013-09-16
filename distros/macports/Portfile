@@ -1,26 +1,26 @@
 # $Id$
 
-PortSystem			1.0
+PortSystem          1.0
 
-name				avt
-version				0.2
-categories			science
-platforms			darwin linux
-license				GPL-2+
-revision			1
-maintainers			gmail.com:fernando.iazeolla
-description			Aviation Tools (metar, taf, decode airline, geo info)
-long_description	\
-		Aviation Tools: \
-		* gets metar \
-		* gets taf \
-		* decode iata / icao airports \
-		* gets sunrise / sunset \
-		* gets geo info \
-		* decode airline codes \
-		* decode aircraft tail codes \
-		* decode aircraft names \
-					
+name                avt
+version             0.2
+categories          science
+platforms           darwin linux
+license             GPL-2+
+revision            1
+maintainers         gmail.com:fernando.iazeolla
+description         Aviation Tools (metar, taf, decode airline, geo info)
+long_description    \
+                    Aviation Tools: \
+                    * gets metar \
+                    * gets taf \
+                    * decode iata / icao airports \
+                    * gets sunrise / sunset \
+                    * gets geo info \
+                    * decode airline codes \
+                    * decode aircraft tail codes \
+                    * decode aircraft names \
+                    
 homepage            http://github.com/elboza/avt
 master_sites        http://www.autistici.org/0xFE/software/releases/avt
 
@@ -28,22 +28,22 @@ checksums           md5    aefca34db3fea738019dbfb402cf9f18 \
                     sha1    54fc9a0085dd0a372b2af81b7f3c60f042a85898 \
                     rmd160  1ba76e714eaa02246d40064574a35c3b3940ebb8
 
-worksrcdir			${name}
-use_configure		no
+worksrcdir          ${name}
+use_configure       no
 patch {
-	reinplace "s|/usr/share/avt/|${prefix}/share/avt/|g" ${worksrcpath}/avt.rb
+    reinplace "s|/usr/share/avt/|${prefix}/share/avt/|g" ${worksrcpath}/avt.rb
 }
 build {}
 destroot.destdir prefix=/usr
 destroot {
-	xinstall -m 755 ${worksrcpath}/avt.rb ${destroot}${prefix}/bin/avt
-	xinstall -d ${destroot}${prefix}/share/avt/
-	eval xinstall -m 644 [glob ${worksrcpath}/*.avt] ${destroot}${prefix}/share/avt/
-	#xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}${prefix}/share/avt/
-	#xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}${prefix}/share/avt/
-	#xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}${prefix}/share/avt/
-	#xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}${prefix}/share/avt/
-	#xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}${prefix}/share/avt/
+    xinstall -m 755 ${worksrcpath}/avt.rb ${destroot}${prefix}/bin/avt
+    xinstall -d ${destroot}${prefix}/share/avt/
+    eval xinstall -m 644 [glob ${worksrcpath}/*.avt] ${destroot}${prefix}/share/avt/
+    #xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}${prefix}/share/avt/
+    #xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}${prefix}/share/avt/
+    #xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}${prefix}/share/avt/
+    #xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}${prefix}/share/avt/
+    #xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}${prefix}/share/avt/
 }
 
 
