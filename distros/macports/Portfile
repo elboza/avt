@@ -24,23 +24,26 @@ long_description	\
 homepage            http://github.com/elboza/avt
 master_sites        http://www.autistici.org/0xFE/software/releases/avt
 
-checksums           md5    698d81753decd1e011524bc6a42a0d5d \
-                    sha1    46936ec71217c49279568b4b8ad901923e7b2a0d \
-                    rmd160  439b76e1f5a04f28fda2c777863f43c2a920cf1b
+checksums           md5    aefca34db3fea738019dbfb402cf9f18 \
+                    sha1    54fc9a0085dd0a372b2af81b7f3c60f042a85898 \
+                    rmd160  1ba76e714eaa02246d40064574a35c3b3940ebb8
 
 worksrcdir			${name}
 use_configure		no
-
+patch {
+	reinplace "s|/usr/share/avt/|${prefix}/share/avt/|g" ${worksrcpath}/avt.rb
+}
 build {}
-
+destroot.destdir prefix=/usr
 destroot {
 	xinstall -m 755 ${worksrcpath}/avt.rb ${destroot}${prefix}/bin/avt
-	xinstall -d ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}/usr/share/avt/
-	xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}/usr/share/avt/
+	xinstall -d ${destroot}${prefix}/share/avt/
+	eval xinstall -m 644 [glob ${worksrcpath}/*.avt] ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/ssv.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/tail_codes.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/geo_iata.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/icao_iata.avt ${destroot}${prefix}/share/avt/
+	#xinstall -m 644 ${worksrcpath}/aircraft_type_decode.avt ${destroot}${prefix}/share/avt/
 }
 
 
