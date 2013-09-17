@@ -13,7 +13,7 @@
 # mkdir -p /usr/local/portage/app-misc/avt
 # cp avt-0.2.ebuild /usr/local/portage/app-misc/avt/
 # cd /usr/local/portage/app-misc/avt
-# ebuild  ${AVT}.ebuild digest
+# ebuild  ${P}.ebuild digest
 # echo PORTDIR_OVERLAY=/usr/local/portage >> /etc/make.conf
 # emerge avt
 
