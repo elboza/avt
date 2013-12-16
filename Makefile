@@ -19,7 +19,7 @@ all: help
 .PHONY: install uninstall dist clean
 
 install:
-	echo "installing ${PROG_NAME} to ${BINDIR}"
+	echo "installing ${TARGET} to ${BINDIR}"
 	mkdir -p ${DESTDIR}${LIB_DIR}
 	mkdir -p ${DESTDIR}${BINDIR}
 	cp -p ${SRC} ${DESTDIR}${BINDIR}/${TARGET}
@@ -42,8 +42,8 @@ install:
 uninstall:
 	echo "uninstalling avt from system…"
 	rm -f ${DESTDIR}${LIB_DIR}*
-	rmdir ${DESTDIR}${LIB_DIR}
-	rm -f ${DEST_DIR}${TARGET}
+	if [ -d ${DESTDIR}${LIB_DIR} ]; then rmdir ${DESTDIR}${LIB_DIR}; fi
+	rm -f ${DEST_DIR}${BINDIR}/${TARGET}
 	rm -f ${DESTDIR}${MANDIR}/${MANTARGET}
 	echo "done."
 
