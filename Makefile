@@ -4,59 +4,76 @@ ICAO_IATA_FILE="icao_iata.avt"
 SSV_FILE="ssv.avt"
 TC_FILE="tail_codes.avt"
 LIB_DIR="/usr/share/avt/"
-SRC_NAME=avt.rb
-PROG_NAME=avt
-DEST_DIR=/usr/bin/
-PROG_VERSION=`cat avt.rb|grep "VERSION="|cut -d '"' -f2`
+SRC=avt.rb
+TARGET=avt
+BINDIR=/usr/local/bin
+MANDIR=/usr/local/share/man/man1
+DIST_DIR=avt
+VERSION=`cat avt.rb|grep "VERSION="|cut -d '"' -f2`
+MANSRC=man/${TARGET}.man
+MANTARGET=${TARGET}.1
 SHELL=/bin/bash
 
-all:
+all: help
 
 .PHONY: install uninstall dist clean
 
 install:
-	echo "installing ${PROG_NAME} to ${DEST_DIR}"
-	if [ ! -d ${LIB_DIR} ] ; then mkdir ${LIB_DIR} ; fi
-	cp ${SRC_NAME} ${DEST_DIR}
-	if [ ! -f ${DEST_DIR}${PROG_NAME} ] ; then ln -s ${DEST_DIR}${SRC_NAME} ${DEST_DIR}${PROG_NAME} ; fi
-	chmod 755 ${DEST_DIR}${SRC_NAME}
-	cp ${AC_FILE} ${LIB_DIR}
-	cp ${GEO_FILE} ${LIB_DIR}
-	cp ${ICAO_IATA_FILE} ${LIB_DIR}
-	cp ${SSV_FILE} ${LIB_DIR}
-	cp ${TC_FILE} ${LIB_DIR}
-	chmod 444 ${LIB_DIR}${AC_FILE}
-	chmod 444 ${LIB_DIR}${GEO_FILE}
-	chmod 444 ${LIB_DIR}${ICAO_IATA_FILE}
-	chmod 444 ${LIB_DIR}${SSV_FILE}
-	chmod 444 ${LIB_DIR}${TC_FILE}
+	echo "installing ${PROG_NAME} to ${BINDIR}"
+	mkdir -p ${DESTDIR}${LIB_DIR}
+	mkdir -p ${DESTDIR}${BINDIR}
+	cp -p ${SRC} ${DESTDIR}${BINDIR}/${TARGET}
+	chmod 555 ${BINDIR}/${TARGET}
+	cp -p ${AC_FILE} ${DESTDIR}${LIB_DIR}
+	cp -p ${GEO_FILE} ${DESTDIR}${LIB_DIR}
+	cp -p ${ICAO_IATA_FILE} ${DESTDIR}${LIB_DIR}
+	cp -p ${SSV_FILE} ${DESTDIR}${LIB_DIR}
+	cp -p ${TC_FILE} ${DESTDIR}${LIB_DIR}
+	chmod 444 ${DESTDIR}${LIB_DIR}${AC_FILE}
+	chmod 444 ${DESTDIR}${LIB_DIR}${GEO_FILE}
+	chmod 444 ${DESTDIR}${LIB_DIR}${ICAO_IATA_FILE}
+	chmod 444 ${DESTDIR}${LIB_DIR}${SSV_FILE}
+	chmod 444 ${DESTDIR}${LIB_DIR}${TC_FILE}
+	mkdir -p ${DESTDIR}${MANDIR}
+	cp -p ${MANSRC} ${DESTDIR}${MANDIR}/${MANTARGET}
+	chmod 644 ${DESTDIR}${MANDIR}/${MANTARGET}
 	echo "DONE."
 
 uninstall:
 	echo "uninstalling avt from system…"
-	rm -f ${LIB_DIR}*
-	rmdir ${LIB_DIR}
-	rm -f ${DEST_DIR}${PROG_NAME}
-	rm -f ${DEST_DIR}${SRC_NAME}
+	rm -f ${DESTDIR}${LIB_DIR}*
+	rmdir ${DESTDIR}${LIB_DIR}
+	rm -f ${DEST_DIR}${TARGET}
+	rm -f ${DESTDIR}${MANDIR}/${MANTARGET}
 	echo "done."
 
 dist:
 	echo "making dist tarball…"
-	mkdir ${PROG_NAME}
-	cp ${SRC_NAME} ${PROG_NAME}
-	cp ${AC_FILE} ${PROG_NAME}
-	cp ${GEO_FILE} ${PROG_NAME}
-	cp ${ICAO_IATA_FILE} ${PROG_NAME}
-	cp ${SSV_FILE} ${PROG_NAME}
-	cp ${TC_FILE} ${PROG_NAME}
-	cp Makefile ${PROG_NAME}
-	tar -czvf ${PROG_NAME}-${PROG_VERSION}.tar.gz ${PROG_NAME}/
-	rm -f ./${PROG_NAME}/*
-	rmdir ${PROG_NAME}
+	mkdir ${DIST_DIR}
+	cp ${SRC} ${DIST_DIR}/
+	cp ${AC_FILE} ${DIST_DIR}/
+	cp ${GEO_FILE} ${DIST_DIR}/
+	cp ${ICAO_IATA_FILE} ${DIST_DIR}/
+	cp ${SSV_FILE} ${DIST_DIR}/
+	cp ${TC_FILE} ${DIST_DIR}/
+	cp Makefile ${DIST_DIR}/
+	mkdir -p ${DIST_DIR}/man
+	cp -p ${MANSRC} ${DIST_DIR}/${MANSRC}
+	COPYFILE_DISABLE=1 tar -cvzf ${TARGET}-${VERSION}.tar.gz ${DIST_DIR}/
+	rm -rf ./${DIST_DIR}/*
+	rmdir ${DIST_DIR}
 	echo "done."
 
 clean:
-	rm -f ./${PROG_NAME}/*
-	rmdir ${PROG_NAME}
+	rm -rf ./${DIST_DIR}/*
+	if [ -d ${DIST_DIR} ]; then rmdir ${DIST_DIR}; fi
 
 	
+help:
+	@ echo "The following targets are available"
+	@ echo "help      - print this message"
+	@ echo "install   - install everything"
+	@ echo "uninstall - uninstall everything"
+	@ echo "clean     - remove any temporary files"
+	@ echo "dist      - make a dist .tar.gz tarball package"
+
