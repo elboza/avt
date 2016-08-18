@@ -1,0 +1,1 @@
+cat IATA\ \&\ ICAO\ Airport\ Codes\ -\ flugzeuginfo.net.html |grep -e '</td\|tr>'|sed -e's/<\/tr>/;/g'|sed -e's/<\/td>/:/g'|sed -e 's/<[^>]*>//g'|tr -d '\n'|tr -d '\r'|sed -e's/\s*//g'|sed -e 's/:;/\n/g' 

@@ -175,8 +175,10 @@ def ssv_print
 end
 
 def get_metar
-	metar_raw_str="http://weather.noaa.gov/pub/data/observations/metar/stations/"
-	metar_decoded_str="http://weather.noaa.gov/pub/data/observations/metar/decoded/"
+	#metar_raw_str="http://weather.noaa.gov/pub/data/observations/metar/stations/"
+	metar_raw_str="http://tgftp.nws.noaa.gov/data/observations/metar/stations/"
+	#metar_decoded_str="http://weather.noaa.gov/pub/data/observations/metar/decoded/"
+	metar_decoded_str="http://tgftp.nws.noaa.gov/data/observations/metar/decoded/"
 	if @decode==true
 		metar_str=metar_decoded_str
 	else
@@ -200,7 +202,8 @@ def print_metar
 end
 
 def get_taf
-	taf_str="http://weather.noaa.gov/pub/data/forecasts/taf/stations/"+@icao+".TXT"
+	#taf_str="http://weather.noaa.gov/pub/data/forecasts/taf/stations/"+@icao+".TXT"
+	taf_str="http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/"+@icao+".TXT"
 	begin
 		f=open taf_str
 		@taf=f.readlines
@@ -218,8 +221,8 @@ def print_taf
 end
 
 def get_geo2
-	geo_str="http://www.earthtools.org/timezone/#{@lat}/#{@long}"
-	geo_str2="http://www.earthtools.org/height/#{@lat}/#{@long}"
+	geo_str="http://new.earthtools.org/timezone/#{@lat}/#{@long}"
+	geo_str2="http://new.earthtools.org/height/#{@lat}/#{@long}"
 	begin
 		f=open geo_str
 		lines=f.read
@@ -243,7 +246,7 @@ def get_geo2
 	@day=@isotime.split(' ').first.split('-')[2]
 	@month=@isotime.split(' ').first.split('-')[1]
 	ddst=@dst=="True" ? 1 : 0
-	geo_str3="http://www.earthtools.org/sun/#{@lat}/#{@long}/#{@day}/#{@month}/#{@timezone}/#{ddst}"
+	geo_str3="http://new.earthtools.org/sun/#{@lat}/#{@long}/#{@day}/#{@month}/#{@timezone}/#{ddst}"
 	p geo_str3 if @verbose
 	begin
 		f=open geo_str3
